@@ -1,0 +1,4 @@
+Loading button config for P1 joystick.
+Loading button config for P2 joystick.
+Initializing keyboard.
+Initializing sound...Initializing graphics.

@@ -1,0 +1,296 @@
+﻿
+;1
+[State -1, Smash Kung Fu Upper]
+type = ChangeState
+value = 3050
+triggerall = power >= 1000
+triggerall = statetype != A
+trigger1 = ctrl
+trigger2 = hitdefattr = SC, NA, SA, HA
+trigger2 = stateno != [3050,3100)
+trigger2 = movecontact
+trigger3 = stateno = 1310 || stateno = 1330
+
+
+;2
+[State -1, Triple Kung Fu Palm]
+type = ChangeState
+value = 3000
+triggerall = power >= 1000
+trigger1 = statetype = S
+trigger1 = ctrl
+trigger2 = statetype != A
+trigger2 = hitdefattr = SC, NA, SA, HA
+trigger2 = stateno != [3000,3050)
+trigger2 = movecontact
+trigger3 = stateno = 1310 || stateno = 1330
+
+
+;3
+[State -1, Fast Kung Fu Knee]
+type = ChangeState
+value = 1070
+triggerall = power >= 330
+trigger1 = var(1) 
+
+
+;4
+[State -1, Light Kung Fu Knee]
+type = ChangeState
+value = 1050
+trigger1 = var(1)
+
+
+;5
+[State -1, Strong Kung Fu Knee]
+type = ChangeState
+value = 1060
+trigger1 = var(1)
+
+
+;6
+[State -1, Fast Kung Fu Palm]
+type = ChangeState
+value = 1020
+triggerall = power >= 330
+trigger1 = var(1) 
+
+;7
+[State -1, Light Kung Fu Palm]
+type = ChangeState
+value = 1000
+trigger1 = var(1)
+
+;8
+[State -1, Strong Kung Fu Palm]
+type = ChangeState
+value = 1010
+trigger1 = var(1)
+
+;9
+[State -1, Fast Kung Fu Upper]
+type = ChangeState
+value = 1120
+triggerall = power >= 330
+trigger1 = var(1)
+
+;10
+[State -1, Light Kung Fu Upper]
+type = ChangeState
+value = 1100
+trigger1 = var(1)
+
+;11
+[State -1, Strong Kung Fu Upper]
+type = ChangeState
+value = 1110
+trigger1 = var(1)
+
+;12
+[State -1, Fast Kung Fu Blow]
+type = ChangeState
+value = 1220
+triggerall = power >= 330
+trigger1 = var(1)
+
+;13
+[State -1, Light Kung Fu Blow]
+type = ChangeState
+value = 1200
+trigger1 = var(1)
+
+;14
+[State -1, Strong Kung Fu Blow]
+type = ChangeState
+value = 1210
+trigger1 = var(1)
+
+;15
+[State -1, High Kung Fu Blocking High]
+type = ChangeState
+value = 1300
+trigger1 = ctrl
+trigger1 = statetype != A
+trigger2 = stateno = 1310 || stateno = 1330
+trigger2 = time > 0
+
+;16
+[State -1, High Kung Fu Blocking Low]
+type = ChangeState
+value = 1320
+trigger1 = ctrl
+trigger1 = statetype != A
+trigger2 = stateno = 1310 || stateno = 1330
+trigger2 = time > 0
+
+;17
+[State -1, High Kung Fu Blocking Low]
+type = ChangeState
+value = 1340
+trigger1 = ctrl
+trigger1 = statetype = A
+trigger2 = stateno = 1350
+trigger2 = time > 0
+
+;18
+[State -1, Far Kung Fu Zankou]
+type = ChangeState
+value = 1420
+triggerall = power >= 330
+trigger1 = var(1)
+
+;19
+[State -1, Light Kung Fu Zankou]
+type = ChangeState
+value = 1400
+trigger1 = var(1)
+
+;20
+[State -1, Strong Kung Fu Zankou]
+type = ChangeState
+value = 1410
+trigger1 = var(1)
+
+;21
+[State -1, Run Fwd]
+type = ChangeState
+value = 100
+trigger1 = statetype = S
+trigger1 = ctrl
+
+;22
+[State -1, Run Back]
+type = ChangeState
+value = 105
+trigger1 = statetype = S
+trigger1 = ctrl
+
+;23
+[State -1, Kung Fu Throw]
+type = ChangeState
+value = 800
+triggerall = statetype = S
+triggerall = ctrl
+triggerall = stateno != 100
+trigger1 = p2bodydist X < 3
+trigger1 = (p2statetype = S) || (p2statetype = C)
+trigger1 = p2movetype != H
+trigger2 = p2bodydist X < 5
+trigger2 = (p2statetype = S) || (p2statetype = C)
+trigger2 = p2movetype != H
+
+
+;24
+[State -1, Stand Light Punch]
+type = ChangeState
+value = 200
+trigger1 = statetype = S
+trigger1 = ctrl
+trigger2 = stateno = 200
+trigger2 = time > 6
+
+;25
+[State -1, Stand Strong Punch]
+type = ChangeState
+value = 210
+trigger1 = statetype = S
+trigger1 = ctrl
+trigger2 = (stateno = 200) && time > 5
+trigger3 = (stateno = 230) && time > 6
+
+;26
+[State -1, Stand Light Kick]
+type = ChangeState
+value = 230
+trigger1 = statetype = S
+trigger1 = ctrl
+trigger2 = (stateno = 200) && time > 7
+trigger3 = (stateno = 230) && time > 9
+
+;27
+[State -1, Standing Strong Kick]
+type = ChangeState
+value = 240
+trigger1 = statetype = S
+trigger1 = ctrl
+trigger2 = (stateno = 200) && time > 5
+trigger3 = (stateno = 230) && time > 6
+
+;28
+[State -1, Taunt]
+type = ChangeState
+value = 195
+trigger1 = statetype != A
+trigger1 = ctrl
+
+;29
+[State -1, Crouching Light Punch]
+type = ChangeState
+value = 400
+trigger1 = statetype = C
+trigger1 = ctrl
+
+;30
+[State -1, Crouching Strong Punch]
+type = ChangeState
+value = 410
+trigger1 = statetype = C
+trigger1 = ctrl
+trigger2 = (stateno = 400) || (stateno = 430)
+trigger2 = (time > 9) || (movecontact && time > 5)
+
+;31
+[State -1, Crouching Light Kick]
+type = ChangeState
+value = 430
+trigger1 = statetype = C
+trigger1 = ctrl
+trigger2 = (stateno = 400) || (stateno = 430)
+trigger2 = (time > 9) || (movecontact && time > 5)
+
+;32
+[State -1, Crouching Strong Kick]
+type = ChangeState
+value = 440
+trigger1 = statetype = C
+trigger1 = ctrl
+trigger2 = (stateno = 400) || (stateno = 430)
+trigger2 = (time > 9) || (movecontact && time > 5)
+
+;33
+[State -1, Jump Light Punch]
+type = ChangeState
+value = 600
+trigger1 = statetype = A
+trigger1 = ctrl
+trigger2 = stateno = 600
+trigger2 = statetime >= 7
+trigger3 = stateno = 1350
+
+;34
+[State -1, Jump Strong Punch]
+type = ChangeState
+value = 610
+trigger1 = statetype = A
+trigger1 = ctrl
+trigger2 = stateno = 600 || stateno = 630
+trigger2 = movecontact
+trigger3 = stateno = 1350
+
+;35
+[State -1, Jump Light Kick]
+type = ChangeState
+value = 630
+trigger1 = statetype = A
+trigger1 = ctrl
+trigger2 = stateno = 1350
+
+;36
+[State -1, Jump Strong Kick]
+type = ChangeState
+value = 640
+trigger1 = statetype = A
+trigger1 = ctrl
+trigger2 = stateno = 600 || stateno = 630
+trigger2 = movecontact
+trigger3 = stateno = 1350

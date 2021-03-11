@@ -1,0 +1,7 @@
+P2BodyDist X, < 30, >= 30
+P2BodyDist Y, >= -30, = 10
+InGuardDist, = 0, = 1
+P2MoveType, = A, = I, = H
+P2StateType, = S, = C, = A
+MoveContact, = 0, != 0
+MoveGuarded, = 0, != 0

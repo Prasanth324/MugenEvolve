@@ -1,0 +1,11 @@
+[config 1]
+PopulationSize = 5
+NoOfGenerations = 1
+ElitismPercentage = 30
+MutationPercentage = 10
+
+[config 2]
+PopulationSize = 5
+NoOfGenerations = 3
+ElitismPercentage = 30
+MutationPercentage = 10
