@@ -1,5 +1,5 @@
 # MugenEvolve
-A Genetic Programming based AI creation tool for the M.U.G.E.N fighting game.
+A Genetic Programming based AI creation tool for the [M.U.G.E.N fighting game](https://en.wikipedia.org/wiki/Mugen_(engine)).
 
 Inspired from the work published in [this research paper](https://core.ac.uk/download/pdf/74208089.pdf) and loosely based on it, this python module creates a diverse set of AI characters for the *mugen* fighting game based on the *kfm* character template. The module creates an initial population of random characters and evolves them into more and more competent ones with each passing generation. The fitness of a character is measured according to its ability to win the game. Games are run in parallel with a pool size equal to the number of logical CPUs in the host computer. 
 
