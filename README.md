@@ -1,2 +1,7 @@
 # MugenEvolve
 A Genetic Programming based AI creation tool for the M.U.G.E.N fighting game.
+
+Inspired from the work published in [this research paper](https://core.ac.uk/download/pdf/74208089.pdf) and loosely based on it, this python module creates a diverse set of AI characters for the *mugen* fighting game based on the *kfm* character template. The module creates an initial population of random characters and evolves them into more and more competent ones with each passing generation. The fitness of a character is measured according to its ability to win the game. Games are run in parallel with a pool size equal to the number of logical CPUs in the host computer. 
+
+A mugen 1.0 version(windows) has also been provided wherein the values of some of the game parameters, namely *time, speed, resolution, draw-shadows* and *sound*, all located at *mugen/data/mugen.cfg*, have been changed so as to aid in a faster and more convenient evolution process.
+The input parameters, namely *population size, number of generations, elitism and mutation percentage* have to be saved in the *MugenEvolve/config.txt* file from where the main module(*main.py*) takes its input. Multiple test cases can be given together in one go, as long as they are grouped into seperate sections(*config 1, config 2*,..etc). The program creates a vault to store the ouput of each test case and names each vault uniquely using a timestamp.  
